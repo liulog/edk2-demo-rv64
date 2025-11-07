@@ -1,0 +1,7 @@
+*.raw
+*.xz
+*.img
+
+edk2
+Build
+mnt
