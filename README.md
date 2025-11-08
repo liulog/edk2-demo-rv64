@@ -65,13 +65,16 @@ truncate -s 32M RISCV_VIRT_VARS.fd
 ```
 Then you can place them in pflash on `virt` machine like `run-opensuse-riscv.sh` or `run-helloworld.sh`.
 
+- RISCV_VIRT_CODE.fd: Read-Only, here I place it under dir ./firmware/
+- RISCV_VIRT_VARS.fd: Read-Write, here I place it under dir ./flash/
+
 ### 2. edk2 helloworld
 
 ```bash
 build -a RISCV64 --buildtarget RELEASE -p MdeModulePkg/MdeModulePkg.dsc -t GCC5
 ```
 
-### 3. boot linux?
+### 3. edk2 -> grub2
 
 TODO:
 
@@ -81,3 +84,7 @@ TODO:
 - https://www.bilibili.com/opus/548368024058462271
 
 - https://www.bilibili.com/opus/548437177325385603
+
+- https://zhuanlan.zhihu.com/p/4238237997
+
+- https://gitee.com/openeuler2020/team-1375238611
